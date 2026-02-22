@@ -31,7 +31,7 @@ struct TransitSearchView: View {
                     VStack(spacing: 24) {
                         // Header
                         VStack(alignment: .leading, spacing: 8) {
-                            Text("nezu-transit")
+                            Text("nezu-train")
                                 .font(.system(size: 40, weight: .black, design: .rounded))
                                 .foregroundStyle(
                                     LinearGradient(colors: [.primary, .primary.opacity(0.7)], startPoint: .top, endPoint: .bottom)

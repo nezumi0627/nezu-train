@@ -1,4 +1,4 @@
-# Nezu App
+# nezu-train
 
 A simple iOS app that automatically builds unsigned IPAs using GitHub Actions and features the iOS 26 **Liquid Glass** design.
 
@@ -14,7 +14,7 @@ nezu-train/
 │       └── build-unsigned-ipa.yml   ← CI/CD (Builds on version change)
 ├── test-app/
 │   └── nezu-train/
-│       ├── App.swift            ← App entry point (NezuApp)
+│       ├── NezuTrainApp.swift   ← App entry point (NezuTrainApp)
 │       ├── ContentView.swift    ← Main screen (TabView + HomeView)
 │       ├── InfoView.swift       ← Info screen
 │       ├── UpdateCheckView.swift← OTA Update screen (UpdateView)
@@ -46,7 +46,7 @@ nezu-train/
 
 | File                    | Role                                                                |
 | ----------------------- | ------------------------------------------------------------------- |
-| `App.swift`             | `@main` entry point. Launches `ContentView`                         |
+| `NezuTrainApp.swift`    | `@main` entry point. Launches `ContentView`                         |
 | `ContentView.swift`     | Manages 3 screens via `TabView`: Home / Update / Info               |
 | `InfoView.swift`        | Developer profile and social links                                  |
 | `UpdateCheckView.swift` | UI for checking updates using `VersionManager`                      |

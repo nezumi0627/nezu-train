@@ -2,7 +2,7 @@
 
 [English](./en/update-mechanism.md)
 
-Nezu App は GitHub Releases を利用した OTA (Over-The-Air) 更新システムを備えています。
+nezu-train は GitHub Releases を利用した OTA (Over-The-Air) 更新システムを備えています。
 
 ## 📡 VersionManager
 

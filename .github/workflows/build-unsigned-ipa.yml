@@ -120,7 +120,7 @@ jobs:
             SCHEME=$(xcodebuild -list -workspace "$TARGET_FILE" | awk '/Schemes:/ {getline; gsub(/^[ \t]+|[ \t]+$/, ""); print}')
             TARGET_ARGS=(-workspace "$TARGET_FILE")
           else
-            TARGET_FILE="nezu-app.xcodeproj"
+            TARGET_FILE="nezu-train.xcodeproj"
             SCHEME=$(xcodebuild -list -project "$TARGET_FILE" | awk '/Schemes:/ {getline; gsub(/^[ \t]+|[ \t]+$/, ""); print}')
             TARGET_ARGS=(-project "$TARGET_FILE")
           fi
@@ -214,7 +214,7 @@ jobs:
 
           # リリース本文の作成 (バックティックをエスケープして確実に表示させる)
           cat > release-body.md <<EOF
-          ## Nezu App v${VERSION} (Build ${BUILD_NUM})
+          ## nezu-train v${VERSION} (Build ${BUILD_NUM})
 
           - **Version**: \`${VERSION}\`
           - **Build**: \`${BUILD_NUM}\`
@@ -232,12 +232,12 @@ jobs:
 
           **SideStore / AltStore 用:**
           \`\`\`text
-          https://nezumi0627.github.io/nezu-app/apps.json
+          https://nezumi0627.github.io/nezu-train/apps.json
           \`\`\`
 
           **LiveContainer 用:**
           \`\`\`text
-          livecontainer://source?url=aHR0cHM6Ly9uZXp1bWkwNjI3LmdpdGh1Yi5pby9uZXp1LWFwcC9hcHBzLmpzb24=
+          livecontainer://source?url=aHR0cHM6Ly9uZXp1bWkwNjI3LmdpdGh1Yi5pby9uZXp1LXRyYWluL2FwcHMuanNvbg==
           \`\`\`
 
           ### 🏗️ 手動インストール (Copy & Paste)
@@ -306,7 +306,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ env.VERSION }}-build${{ env.BUILD_NUM }}
-          name: "Nezu App v${{ env.VERSION }} (Build ${{ env.BUILD_NUM }})"
+          name: "nezu-train v${{ env.VERSION }} (Build ${{ env.BUILD_NUM }})"
           body_path: release-body.md
           draft: true
           files: ${{ env.IPA_NAME }}
