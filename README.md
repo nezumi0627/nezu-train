@@ -1,17 +1,17 @@
-# Nezu App
+# nezu-train
 
-GitHub Actions で署名無し IPA を自動ビルドし、iOS 26 の **Liquid Glass** デザインを採用したシンプルな iOS アプリ。
+GitHub Actions で署名無し IPA を自動ビルドし、iOS 26 の **Liquid Glass** デザインを採用した、飛行機・バス・新幹線に特化した乗り換え案内アプリ。
 
 ## 📖 プロジェクト構造
 
 ```
-nezu-app/
+nezu-train/
 ├── README.md                   ← このファイル
 ├── .github/
 │   └── workflows/
 │       └── build-unsigned-ipa.yml   ← CI/CD（バージョン変更時のみビルド）
 ├── test-app/
-│   └── nezu-app/
+│   └── nezu-train/
 │       ├── App.swift            ← アプリエントリポイント (NezuApp)
 │       ├── ContentView.swift    ← メイン画面 (TabView + HomeView)
 │       ├── InfoView.swift       ← 開発者情報画面
@@ -77,7 +77,7 @@ Button("Action") { }
 
 ### ビルド & リリース
 
-1. `test-app/nezu-app/Info.plist` のバージョンまたはビルド番号を変更
+1. `test-app/nezu-train/Info.plist` のバージョンまたはビルド番号を変更
    ```xml
    <key>CFBundleVersion</key>
    <string>8</string>  <!-- ← 変更 -->
@@ -89,7 +89,7 @@ Button("Action") { }
 
 ### ダウンロードページ
 
-IPA は [GitHub Pages](https://nezumi0627.github.io/nezu-app/) からもダウンロード可能です。
+IPA は [GitHub Pages](https://nezumi0627.github.io/nezu-train/) からもダウンロード可能です。
 
 ## 📚 ドキュメント
 

@@ -6,13 +6,13 @@ Nezu App includes an OTA (Over-The-Air) update system powered by GitHub Releases
 
 ## 📡 VersionManager
 
-The `VersionManager` class (`test-app/nezu-app/VersionManager.swift`) is the core of the update system.
+The `VersionManager` class (`test-app/nezu-train/VersionManager.swift`) is the core of the update system.
 
 ### Flow
 
 ```
 1. Fetch releases from GitHub API
-   GET https://api.github.com/repos/nezumi0627/nezu-app/releases
+   GET https://api.github.com/repos/nezumi0627/nezu-train/releases
 
 2. Filter out draft releases, keep only those with .ipa assets
 

@@ -22,7 +22,7 @@ Builds run **only when the version changes**.
 
 ### How to update the version
 
-Edit `test-app/nezu-app/Info.plist`:
+Edit `test-app/nezu-train/Info.plist`:
 
 ```xml
 <key>CFBundleShortVersionString</key>
@@ -70,14 +70,14 @@ Since this project is intended for sideloading, unsigned IPAs are generated:
 {AppName}-v{VERSION}-build{BUILD_NUM}-{SHORT_SHA}.ipa
 ```
 
-Example: `nezu-app-v2.0.0-build1-831eddd.ipa`
+Example: `nezu-train-v2.0.0-build1-831eddd.ipa`
 
 ### Package structure
 
 ```
-nezu-app.ipa
+nezu-train.ipa
 └── Payload/
-    └── nezu-app.app/
+    └── nezu-train.app/
         ├── Info.plist
         ├── PkgInfo
         └── ... (compiled binaries and assets)

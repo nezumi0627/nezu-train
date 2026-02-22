@@ -29,7 +29,7 @@ GitHub Actions を使用して IPA を自動ビルドし、GitHub Releases で�
 
 ## 🚀 クイックスタート
 
-1. `test-app/nezu-app/Info.plist` のバージョンを更新
+1. `test-app/nezu-train/Info.plist` のバージョンを更新
 2. `main` ブランチにプッシュ
 3. GitHub Actions がバージョン変更を検知して自動ビルド
 4. **Releases** タブから Draft Release を公開

@@ -29,7 +29,7 @@ In-app update checking and IPA download mechanism.
 
 ## 🚀 Quick Start
 
-1. Update the version in `test-app/nezu-app/Info.plist`
+1. Update the version in `test-app/nezu-train/Info.plist`
 2. Push to the `main` branch
 3. GitHub Actions detects the version change and builds automatically
 4. Publish the Draft Release from the **Releases** tab

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A1234567890123456789014D"
-               BuildableName = "nezu-app.app"
-               BlueprintName = "nezu-app"
-               ReferencedContainer = "container:nezu-app.xcodeproj">
+               BuildableName = "nezu-train.app"
+               BlueprintName = "nezu-train"
+               ReferencedContainer = "container:nezu-train.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1234567890123456789014D"
-            BuildableName = "nezu-app.app"
-            BlueprintName = "nezu-app"
-            ReferencedContainer = "container:nezu-app.xcodeproj">
+            BuildableName = "nezu-train.app"
+            BlueprintName = "nezu-train"
+            ReferencedContainer = "container:nezu-train.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1234567890123456789014D"
-            BuildableName = "nezu-app.app"
-            BlueprintName = "nezu-app"
-            ReferencedContainer = "container:nezu-app.xcodeproj">
+            BuildableName = "nezu-train.app"
+            BlueprintName = "nezu-train"
+            ReferencedContainer = "container:nezu-train.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -6,13 +6,13 @@ Nezu App は GitHub Releases を利用した OTA (Over-The-Air) 更新システ�
 
 ## 📡 VersionManager
 
-`VersionManager` クラス (`test-app/nezu-app/VersionManager.swift`) が更新チェックの中核です。
+`VersionManager` クラス (`test-app/nezu-train/VersionManager.swift`) が更新チェックの中核です。
 
 ### 動作フロー
 
 ```
 1. GitHub API からリリース一覧を取得
-   GET https://api.github.com/repos/nezumi0627/nezu-app/releases
+   GET https://api.github.com/repos/nezumi0627/nezu-train/releases
 
 2. Draft リリースを除外し、公開済みリリースのみをフィルタ
 

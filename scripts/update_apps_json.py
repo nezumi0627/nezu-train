@@ -14,9 +14,9 @@ def update_apps_json(version, build, download_url, size_bytes, sha256):
         data = json.load(f)
 
     # Find Nezu App
-    app = next((a for a in data['apps'] if a['bundleIdentifier'] == 'com.example.nezu-app'), None)
+    app = next((a for a in data['apps'] if a['bundleIdentifier'] == 'com.example.nezu-train'), None)
     if not app:
-        print("Error: App with bundleIdentifier 'com.example.nezu-app' not found in JSON.")
+        print("Error: App with bundleIdentifier 'com.example.nezu-train' not found in JSON.")
         return
 
     # Check if version already exists

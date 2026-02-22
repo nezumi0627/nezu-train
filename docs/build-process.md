@@ -22,7 +22,7 @@ Nezu App は GitHub Actions を使用して署名無し IPA を自動ビルド�
 
 ### バージョンの更新方法
 
-`test-app/nezu-app/Info.plist` の以下のフィールドを変更してください:
+`test-app/nezu-train/Info.plist` の以下のフィールドを変更してください:
 
 ```xml
 <key>CFBundleShortVersionString</key>
@@ -70,14 +70,14 @@ skip-notice (ubuntu-latest)    ← スキップ通知
 {AppName}-v{VERSION}-build{BUILD_NUM}-{SHORT_SHA}.ipa
 ```
 
-例: `nezu-app-v1.1.0-build2-831eddd.ipa`
+例: `nezu-train-v1.1.0-build2-831eddd.ipa`
 
 ### パッケージ構造
 
 ```
-nezu-app.ipa
+nezu-train.ipa
 └── Payload/
-    └── nezu-app.app/
+    └── nezu-train.app/
         ├── Info.plist
         ├── PkgInfo
         └── ... (コンパイル済みバイナリとアセット)

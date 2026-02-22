@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  nezu-app
+//  nezu-train
 //
 //  メインのタブビュー。iOS 26 Liquid Glass デザイン。
 //
@@ -10,12 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Tab("ホーム", systemImage: "house.fill") {
-                HomeView()
+            Tab("検索", systemImage: "magnifyingglass") {
+                TransitSearchView()
             }
 
             Tab("更新", systemImage: "arrow.clockwise") {
                 UpdateView()
+            }
+            
+            Tab("設定", systemImage: "gear") {
+                SettingsView()
             }
 
             Tab("情報", systemImage: "info.circle") {

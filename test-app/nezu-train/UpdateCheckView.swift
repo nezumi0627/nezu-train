@@ -1,6 +1,6 @@
 //
 //  UpdateView.swift
-//  nezu-app
+//  nezu-train
 //
 //  GitHub Releases から更新をチェックし、IPA をダウンロードする画面。
 //
@@ -110,11 +110,11 @@ struct UpdateView: View {
                             .padding(.horizontal, 4)
 
                         VStack(spacing: 12) {
-                            sourceButton(title: "SideStore に追加", icon: "plus.circle.fill", scheme: "sidestore://source?url=https://nezumi0627.github.io/nezu-app/apps.json")
+                            sourceButton(title: "SideStore に追加", icon: "plus.circle.fill", scheme: "sidestore://source?url=https://nezumi0627.github.io/nezu-train/apps.json")
                             
-                            sourceButton(title: "AltStore に追加", icon: "plus.circle.fill", scheme: "altstore://source?url=https://nezumi0627.github.io/nezu-app/apps.json")
+                            sourceButton(title: "AltStore に追加", icon: "plus.circle.fill", scheme: "altstore://source?url=https://nezumi0627.github.io/nezu-train/apps.json")
                             
-                            sourceButton(title: "LiveContainer に追加", icon: "shippingbox.fill", scheme: "livecontainer://source?url=aHR0cHM6Ly9uZXp1bWkwNjI3LmdpdGh1Yi5pby9uZXp1LWFwcC9hcHBzLmpzb24=")
+                            sourceButton(title: "LiveContainer に追加", icon: "shippingbox.fill", scheme: "livecontainer://source?url=aHR0cHM6Ly9uZXp1bWkwNjI3LmdpdGh1Yi5pby9uZXp1LXRyYWluL2FwcHMuanNvbg==")
                         }
                     }
                     .padding(20)

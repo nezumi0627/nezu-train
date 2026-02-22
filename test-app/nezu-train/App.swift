@@ -1,6 +1,6 @@
 //
 //  NezuApp.swift
-//  nezu-app
+//  nezu-train
 //
 //  iOS 26 Liquid Glass showcase app with OTA updater
 //

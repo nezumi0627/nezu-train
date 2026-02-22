@@ -42,7 +42,7 @@ ipa-builder/
 │   ├── design-guide.md                # デザインガイド
 │   └── COMPLETE_DOCUMENTATION.md      # 本ドキュメント
 ├── test-app/
-│   └── nezu-app/                      # iOSアプリケーション本体
+│   └── nezu-train/                      # iOSアプリケーション本体
 │       ├── App.swift                  # アプリエントリーポイント
 │       ├── ContentView.swift          # メインビュー
 │       ├── UpdateCheckView.swift      # 更新確認UI
@@ -147,7 +147,7 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "NezuAppDebug",
-            path: "test-app/nezu-app",
+            path: "test-app/nezu-train",
             exclude: [
                 "App.swift",           // iOS専用
                 "ContentView.swift",    // SwiftUI View
@@ -217,8 +217,8 @@ jobs:
     cd test-app || exit 1
     if [ -f "*.xcworkspace" ]; then
       xcodebuild -list -workspace *.xcworkspace || true
-    elif [ -d "nezu-app.xcodeproj" ]; then
-      xcodebuild -list -project nezu-app.xcodeproj || true
+    elif [ -d "nezu-train.xcodeproj" ]; then
+      xcodebuild -list -project nezu-train.xcodeproj || true
     fi
 ```
 
@@ -231,7 +231,7 @@ jobs:
 - name: Build (unsigned)
   run: |
     cd test-app || exit 1
-    PROJECT="nezu-app.xcodeproj"
+    PROJECT="nezu-train.xcodeproj"
     SCHEME=$(xcodebuild -list -project "$PROJECT" | grep -A 1 "Schemes:" | tail -n 1 | xargs)
     xcodebuild \
       -project "$PROJECT" \
@@ -288,11 +288,11 @@ jobs:
 
 **IPA構造**:
 ```
-nezu-app-unsigned-build123-abc1234.ipa
+nezu-train-unsigned-build123-abc1234.ipa
 └── Payload/
-    └── nezu-app.app/
+    └── nezu-train.app/
         ├── Info.plist
-        ├── nezu-app (実行バイナリ)
+        ├── nezu-train (実行バイナリ)
         ├── PkgInfo
         ├── Assets.car
         └── ... (その他リソース)
@@ -300,7 +300,7 @@ nezu-app-unsigned-build123-abc1234.ipa
 
 **ファイル命名規則**:
 - フォーマット: `{APP_NAME}-unsigned-build{BUILD_NUMBER}-{SHORT_SHA}.ipa`
-- 例: `nezu-app-unsigned-build5-abc1234.ipa`
+- 例: `nezu-train-unsigned-build5-abc1234.ipa`
 - `BUILD_NUMBER`: GitHub Actionsの実行番号（自動インクリメント）
 - `SHORT_SHA`: コミットハッシュの最初の7文字
 
@@ -348,7 +348,7 @@ class VersionManager: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     
-    private let githubRepo = "nezumi0627/nezu-app"
+    private let githubRepo = "nezumi0627/nezu-train"
     private let apiBaseUrl = "https://api.github.com/repos"
 }
 ```
@@ -416,7 +416,7 @@ func checkForUpdates() {
 
 **API エンドポイント**:
 ```
-GET https://api.github.com/repos/nezumi0627/nezu-app/releases
+GET https://api.github.com/repos/nezumi0627/nezu-train/releases
 ```
 
 **レスポンス例**:
@@ -428,8 +428,8 @@ GET https://api.github.com/repos/nezumi0627/nezu-app/releases
     "draft": true,
     "assets": [
       {
-        "name": "nezu-app-unsigned-build5-abc1234.ipa",
-        "browser_download_url": "https://github.com/.../nezu-app.ipa"
+        "name": "nezu-train-unsigned-build5-abc1234.ipa",
+        "browser_download_url": "https://github.com/.../nezu-train.ipa"
       }
     ],
     "published_at": "2025-12-24T10:30:00Z"

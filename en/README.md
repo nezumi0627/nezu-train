@@ -7,13 +7,13 @@ A simple iOS app that automatically builds unsigned IPAs using GitHub Actions an
 ## 📖 Project Structure
 
 ```
-nezu-app/
+nezu-train/
 ├── README.md                   ← Main README (JP)
 ├── .github/
 │   └── workflows/
 │       └── build-unsigned-ipa.yml   ← CI/CD (Builds on version change)
 ├── test-app/
-│   └── nezu-app/
+│   └── nezu-train/
 │       ├── App.swift            ← App entry point (NezuApp)
 │       ├── ContentView.swift    ← Main screen (TabView + HomeView)
 │       ├── InfoView.swift       ← Info screen
@@ -74,7 +74,7 @@ Button("Action") { }
 
 ### Build & Release
 
-1. Increment the version or build number in `test-app/nezu-app/Info.plist`.
+1. Increment the version or build number in `test-app/nezu-train/Info.plist`.
    ```xml
    <key>CFBundleVersion</key>
    <string>8</string>
@@ -86,7 +86,7 @@ Button("Action") { }
 
 ### Download Page
 
-IPAs are also available for download from [GitHub Pages](https://nezumi0627.github.io/nezu-app/).
+IPAs are also available for download from [GitHub Pages](https://nezumi0627.github.io/nezu-train/).
 
 ## 📚 Documentation
 

@@ -1,6 +1,6 @@
 //
 //  VersionManager.swift
-//  nezu-app
+//  nezu-train
 //
 //  GitHub Releases API から最新バージョンを取得し、
 //  現在のアプリバージョンと比較する。
@@ -24,7 +24,7 @@ class VersionManager: ObservableObject {
         Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
     }
 
-    private let apiURL = "https://api.github.com/repos/nezumi0627/nezu-app/releases"
+    private let apiURL = "https://api.github.com/repos/nezumi0627/nezu-train/releases"
 
     // MARK: - Check for updates
 

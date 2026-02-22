@@ -1,6 +1,6 @@
 //
 //  InfoView.swift
-//  nezu-app
+//  nezu-train
 //
 //  開発者情報とリンク集。
 //
@@ -12,6 +12,23 @@ struct InfoView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 24) {
+                    // App Description
+                    VStack(spacing: 8) {
+                        Text("nezu-train")
+                            .font(.title2.bold())
+                        Text("Shinkansen & Bus Focus Transit App")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                        Text("公共交通オープンデータの活用と、Live Activity を駆使した次世代の乗り換え案内体験をプロトタイピングしています。")
+                            .font(.footnote)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                    }
+                    .padding()
+                    .glassEffect(in: .rect(cornerRadius: 16))
+                    .padding(.horizontal, 20)
+                    .padding(.top, 10)
+
                     // Profile
                     VStack(spacing: 12) {
                         AsyncImage(url: URL(string: "https://github.com/nezumi0627.png")) { image in
